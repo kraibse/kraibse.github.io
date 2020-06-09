@@ -92,3 +92,36 @@ h3 {
     vertical-align: middle;
     text-align: left;
 }
+
+#navigation {
+    height: 100%;
+    width: 40%;
+    max-width: 480px;
+    margin: 0px 12px;
+    background-color: #333;
+    margin: 24px auto;
+    padding: 8px 32px;
+    box-shadow: 0px 0px 5px 4px rgba(17,17,17,0.6);
+    text-align: left;
+    font-size: 16px;
+}
+
+#navigation p {
+    margin: 6px;
+}
+
+#navigation a:link, a:visited {
+    color: #eee;
+}
+
+#navigation a:hover {
+    color: #edd736;
+}
+
+#navigation ul, li {
+    margin: 6px;
+}
+
+#navigation li:before {
+    color: #eee;
+}
