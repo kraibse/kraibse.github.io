@@ -93,6 +93,14 @@ h3 {
     text-align: left;
 }
 
+#top-header a:before, a:link {
+    color: #d63a3a;
+}
+
+#top-header a:hover {
+    color: #eee;
+}
+
 #navigation {
     height: 100%;
     width: 40%;
