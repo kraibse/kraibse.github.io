@@ -59,7 +59,7 @@ function setupTOC()
             var li = createObject("li", itemList, "class", itemIndex);
             var a = createObject("a", li, "href", "#" + ids[itemIndex]);
             a.innerHTML = titles[itemIndex];
-            
+
             li.appendChild(a);
             itemList.appendChild(li);
         }
