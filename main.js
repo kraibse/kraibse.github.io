@@ -84,12 +84,12 @@ function modifyEntryElements()
         {
             var elements = subs[entry].getElementsByTagName('P');
         }
-        
+
         for (let i = 0; i < elements.length; i++)
         {
             var content = elements[i].innerHTML;
             var link = "https://www.google.com/search?q=" + content;
-            elements[i].innerHTML = "<a target='_blank' href='" + link + "'>" + content + "<a/>";
+            elements[i].innerHTML = '<a target="_blank" href="' + link + '">' + content + "<a/>";
         }
     }
 
