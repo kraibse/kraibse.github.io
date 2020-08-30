@@ -79,7 +79,7 @@ h3 {
     text-align: left;
 }
 
-.top-10 li a:before, li a:link, li a:visited {
+.top-10 a:before, .top-10 a:link, .top-10 a:visited {
     color: #edd736;
     text-decoration: none;
 }
@@ -111,7 +111,7 @@ h3 {
     text-align: left;
 }
 
-#top-header a:before, a:link {
+#top-header a:before, #top-header a:link, #top-header a:visited {
     color: #d63a3a;
 }
 
@@ -136,7 +136,7 @@ h3 {
     margin: 6px;
 }
 
-#navigation a:link, a:visited {
+#navigation a:link, #navigation a:visited, #navigation a:before {
     color: #eee;
 }
 
