@@ -4,6 +4,7 @@ window.onscroll = function() {onScrolling()};
 
 // setup for table of contents
 setupTOC();
+modifyEntryElements();
 
 function onScrolling()
 {
@@ -65,6 +66,33 @@ function setupTOC()
         }
         categoryList.appendChild(itemList);
     }
+}
+
+function modifyEntryElements()
+{
+    subs = document.getElementsByClassName('sub');
+    console.log(subs.length);
+
+    for (var entry = 0; entry < subs.length; entry++)
+    {
+        var classname = subs[entry].className;
+        if (classname == "sub top-10")
+        {
+            var elements = subs[entry].getElementsByTagName('LI');
+        }
+        else
+        {
+            var elements = subs[entry].getElementsByTagName('P');
+        }
+        
+        for (let i = 0; i < elements.length; i++)
+        {
+            var content = elements[i].innerHTML;
+            var link = "https://www.google.com/search?q=" + content;
+            elements[i].innerHTML = "<a target='_blank' href='" + link + "'>" + content + "<a/>";
+        }
+    }
+
 }
 
 function createHeading(parent)
