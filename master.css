@@ -52,6 +52,15 @@ h3 {
     font-size: 18px;
 }
 
+.sub p a:before, p a:link, p a:visited {
+    color: #edd736;
+    text-decoration: none;
+}
+
+.sub a:hover {
+    color: #d63a3a;
+}
+
 .heading {
     text-align: left;
     margin-left: 48px;
@@ -68,6 +77,15 @@ h3 {
 
     box-shadow: 0px 0px 5px 4px rgba(17,17,17,0.6);
     text-align: left;
+}
+
+.top-10 li a:before, li a:link, li a:visited {
+    color: #edd736;
+    text-decoration: none;
+}
+
+.top-10 a:hover {
+    color: #d63a3a;
 }
 
 .top-10 h3 {
