@@ -1,3 +1,4 @@
+import { Octokit } from "https://cdn.pika.dev/@octokit/core";
 // get 'top'-button
 btn = document.getElementById("top-button");
 window.onscroll = function() {onScrolling()};
@@ -125,4 +126,12 @@ function generateHeadingIds(parent, headings, name)
         ids.push(headings[i].getAttribute("id"));
     }
     return ids;
+}
+
+get_request() {
+    const list = await octokit.request('GET /users/{username}/repos', {
+        username: 'kraibse'
+    });
+    console.log(list);
+    console.log("done");
 }
