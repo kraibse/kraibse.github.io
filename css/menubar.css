@@ -1,0 +1,82 @@
+body
+{
+    padding: 16px;
+}
+
+#menubar {
+    color: #edd736;
+    background-color: #293241;
+    text-align: left;
+    padding: 12px 0px;
+    box-shadow: 0px 0px 5px 4px rgba(17,17,17,0.6);
+    width: 100%;
+}
+
+#dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#dropdown-button {
+    color: #edd736;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    padding: 0px 16px;
+    font-size: 24px;
+}
+
+#dropdown-button:hover {
+    color: #eee;
+}
+
+#dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 5px 4px rgba(17,17,17,0.6);
+    z-index: 1;
+}
+
+#dropdown-content a {
+    color: #edd736;
+    background-color: #293241;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#dropdown:hover #dropdown-content {
+    display: block;
+}
+
+#github-link {
+    font-size: 24px;
+    color: #edd736;
+    float: right;
+    display: inline-block;
+    padding-top: 4px;
+    padding-right: 16px;
+}
+
+#github-link a {
+    text-decoration: none;
+}
+
+#github-link a:visited, #github-link a:after, #github-link a:link {
+    color: #edd736;
+}
+
+#github-link a:hover {
+    color: #eee;
+}
+
+#welcome-message {
+    text-align: center;
+    font-size: 48px;
+    padding: 0px;
+}
+
+#welcome-message a {
+    color: #e63946;
+}
