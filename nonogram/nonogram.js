@@ -66,6 +66,7 @@ function generateBoard(map, hints)
 {
     var div = document.getElementById("board"); // get div
     var t = document.createElement("table");
+    t.setAttribute("style", "margin: auto");
 
     for (var y = 0; y < map.length + 1; y++)
     {
@@ -154,6 +155,7 @@ function revealValue(x, y)
 
     var tile = document.getElementById(x + "_" + y);
     var color = "#000";
+    var bg = "";
 
     if (logmode)
     {
@@ -169,11 +171,13 @@ function revealValue(x, y)
             else
             {
                 points += 1;
+                bg = "; background-color: #444;";
+                color = "#fff";
             }
         }
         else
         {
-            return; // restrict point farming
+            return; // skips repeated clicking on revealed panel (point farming)
         }
     }
     else
@@ -189,14 +193,14 @@ function revealValue(x, y)
         }
         else {}
     }
-    tile.setAttribute("style", "color: " + color);
+    tile.setAttribute("style", "color: " + color + bg);
     tile.innerHTML = content;
 
     if (points == totalPoints)
     {
         var pgm = document.getElementById("postgameMessage");
         pgm.innerHTML = "YOU WON!!";
-        pgm.setAttribute("style", "display: block; color: #f00");
+        pgm.setAttribute("style", "display: block; color: #0f0");
     }
     else if (lives == 0)
     {
@@ -223,16 +227,19 @@ function changeMode()
 }
 
 // start of the program
-var map = generate_values();
-var hints = get_hints(map);
+var map = generate_values();                                // generate array with values
+var hints = get_hints(map);                                 // generate side hints
 
+// set standard amount of lives at the beginning of the game
 var lives = 3;
 var livesCounter = document.getElementById("livesCounter");
 livesCounter.innerHTML = lives;
 
+// points system used for winning the game
 var totalPoints = countPoints();
 var points = 0;
 
-logmode = true; // false if commenting
+logmode = true; // false if in commenting mode
 
+// drawing buttons and tables
 generateBoard(map, hints);
