@@ -160,7 +160,7 @@ function revealValue(x, y)
     if (logmode)
     {
         var content = map[y - 1][x - 1].toString();
-        if (tile.innerHTML != "0" && tile.innerHTML != "1")
+        if (tile.innerHTML == " ")
         {
             if (content == 0)
             {
@@ -168,7 +168,7 @@ function revealValue(x, y)
                 livesCounter.innerHTML = lives;
                 color = "#f00";
             }
-            else
+            else if (content == 1)
             {
                 points += 1;
                 bg = "; background-color: #444;";
@@ -186,12 +186,15 @@ function revealValue(x, y)
         {
             var content = " ";
         }
-        else if (tile.innerHTML != "0" && tile.innerHTML != "1")
+        if (tile.innerHTML == " ")
         {
             var content = "X";
             color = "#666";
         }
-        else {}
+        else 
+        {
+            return;
+        }
     }
     tile.setAttribute("style", "color: " + color + bg);
     tile.innerHTML = content;
