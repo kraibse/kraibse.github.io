@@ -186,7 +186,7 @@ function revealValue(x, y)
         {
             var content = " ";
         }
-        if (tile.innerHTML == " ")
+        else if (tile.innerHTML == " ")
         {
             var content = "X";
             color = "#666";
