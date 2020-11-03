@@ -5,7 +5,7 @@ body
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-button
+#board button, #menu button
 {
     background-color: #fff;
     width: 40px;
@@ -13,7 +13,7 @@ button
     margin: 1px;
     border: none;
 }
-button:hover
+#board button:hover, #menu button:hover
 {
     background-color: rgb(255, 204, 36);
 }
@@ -32,7 +32,7 @@ button:hover
 
 #switch
 {
-    width: 80px;
+    width: 80px !important;
 
 }
 
