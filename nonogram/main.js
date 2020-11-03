@@ -182,7 +182,7 @@ function revealValue(x, y)
         {
             var content = " ";
         }
-        else if (tile.innerHTML != "0" && tile.innerHTML != "0")
+        else if (tile.innerHTML != "0" && tile.innerHTML != "1")
         {
             var content = "X";
             color = "#666";
