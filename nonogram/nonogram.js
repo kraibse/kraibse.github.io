@@ -59,6 +59,8 @@ function get_hints(map)
             }
         }
     }
+
+    console.log(hints);
     return hints;
 }
 
@@ -173,9 +175,10 @@ function revealValue(x, y)
             else if (content == 1)
             {
                 points += 1;
-                bg = "; background-color: #444;";
+                bg = "; background-color: #90EE90;";
                 color = "#fff";
-                content = '🟢';
+                content = "✔"
+                // content = '🟢';
                 
                 // fillRemainingRow(x, y);
             }
