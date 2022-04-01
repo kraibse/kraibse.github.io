@@ -1,17 +1,26 @@
 class Board
 {
     grid = [];
-    indicators = [];
+    indicators = [[], []];
 
     size = 10;
+    lives = 3;
+    totalPoints = 0;
+    points = 0;
+
+    isSetting = true;
     
-    Board(_size) {
+    constructor(_size) {
         this.size = _size;
 
         this._generate();
         this._generateIndicators();
 
         this._build();
+    }
+
+    _build() {
+        document.getElementById('livesCounter').innerHTML = this.lives;
     }
 
     _fill() {
@@ -42,7 +51,7 @@ class Board
 
     _generate(_size=this.size) {
         // Returns an two-dimensional array directly proportional to _size
-
+        console.log("Randomizing grid");
         for (var y=0; y < _size; y++)
         {
             this.grid.push([]);
@@ -52,13 +61,57 @@ class Board
                 this.grid[y].push(r);
             }
         }
+        console.log(this.grid);
     }
 
     _generateIndicators() {
+        // Generates a two-dimensional array containing the lenghts of non-bomb tiles
+        console.log("Generating indicators");
+        for (var i = 0; i < this.size; i++)
+        {
+            // filter out lengths from non-bomb tiles from row array
+            var row = this.grid[i].join();
+            row = row.replace(/,/g, "")
+            .split("0")                         // ['','','','1','1','','','1''1''1']
+            .filter((value, index, arr) => {    // removing empty strings from array
+                return value != "";
+            });
+            
+            // retreive all values on column with x = i
+            var col = [];
+            for (var _y = 0; _y < this.size; _y++) {
+                col.push(this.grid[_y][i]);
+            }
+            // filter out bomb tiles from column array
+            col = col.join().replace(/,/g, "")
+            .split("0")
+            .filter((value, index, arr) => {    
+                return value != "";
+            });
 
+            // adding up the ones per element to actual length of free space
+            for (var l = 0; l < row.length; l++) {
+                row[l] = Array.from(row[l]).map(Number).reduce((a, b) => a + b, 0);
+            }
+            for (var l = 0; l < col.length; l++) {
+                col[l] = Array.from(col[l]).map(Number).reduce((a, b) => a + b, 0)
+            }
+
+            this.indicators[0].push(col);
+            this.indicators[1].push(row);
+        }
+
+        console.log(this.indicators);
     }
+
+    _replace
 
     reveal() {
 
     }
 }
+
+$(document).ready(() => {
+    var board = new Board(10);
+    // console.log(board.grid, board.indicators);
+});

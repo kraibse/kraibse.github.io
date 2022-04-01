@@ -60,7 +60,6 @@ function get_hints(map)
         }
     }
 
-    console.log(hints);
     return hints;
 }
 
