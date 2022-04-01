@@ -50,3 +50,8 @@ body
 {
     text-align: center;
 }
+
+.tile {
+    font-size: 16px;
+    font-weight: bold;
+}

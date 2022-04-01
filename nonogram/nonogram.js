@@ -166,13 +166,18 @@ function revealValue(x, y)
             {
                 lives -= 1;
                 livesCounter.innerHTML = lives;
-                color = "#f00";
+                bg = "#ff726f";
+                color = bg;
+                content = '💣';
             }
             else if (content == 1)
             {
                 points += 1;
                 bg = "; background-color: #444;";
                 color = "#fff";
+                content = '🟢';
+                
+                // fillRemainingRow(x, y);
             }
         }
         else
@@ -182,21 +187,27 @@ function revealValue(x, y)
     }
     else
     {
-        if (tile.innerHTML == "X")
+        var comment_symbol = '?';
+
+        if (tile.innerHTML == comment_symbol)
         {
             var content = " ";
+            bg = "#fff";
         }
         else if (tile.innerHTML == " ")
         {
-            var content = "X";
+            var content = comment_symbol;
             color = "#666";
+            bg = "#ccc";
         }
         else 
         {
             return;
         }
     }
-    tile.setAttribute("style", "color: " + color + bg);
+    
+    tile.setAttribute("class", "shadow tile");
+    tile.setAttribute("style", "color: " + color + "; background-color: "+ bg);
     tile.innerHTML = content;
 
     if (points == totalPoints)
