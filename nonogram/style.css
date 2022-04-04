@@ -8,9 +8,9 @@ body
 #board button, #menu button
 {
     background-color: #fff;
-    width: 40px;
-    height: 40px;
-    margin: 1px;
+    width: 44px;
+    height: 44px;
+    margin: 0 2px;
     border: none;
 }
 #board button:hover, #menu button:hover
@@ -54,4 +54,22 @@ body
 .tile {
     font-size: 16px;
     font-weight: bold;
+    /* margin-bottom: 1px; */
 }
+
+/* tr {
+    height: 40px !important; 
+}
+*/
+
+table {
+    /* border-collapse: collapse; */
+    /* cell: 0; */
+    /* padding: 4px; */
+    margin: auto;
+}
+/* 
+tr, td {
+    margin: 0;
+    padding: 0;
+} */
