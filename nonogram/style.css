@@ -32,7 +32,7 @@ body
 
 #switch
 {
-    width: 80px !important;
+    min-width: 160px !important;
 
 }
 
@@ -67,6 +67,8 @@ table {
     /* cell: 0; */
     /* padding: 4px; */
     margin: auto;
+    position: relative;
+    left: -22px;
 }
 /* 
 tr, td {
