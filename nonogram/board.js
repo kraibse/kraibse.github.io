@@ -18,21 +18,29 @@ class KeyboardHandler {
         }
 
         if (e.code == "ArrowLeft" && this.posx != 0) {
+            e.preventDefault();
+
             this.posx--;
             $("#" + this.posx + "_" + this.posy).focus();
         }
 
         if (e.code == "ArrowRight" && this.posx != this.size) {
+            e.preventDefault();
+
             this.posx++;
             $("#" + this.posx + "_" + this.posy).focus();
         }
 
         if (e.code == "ArrowUp" && this.posy != 0) {
+            e.preventDefault();
+
             this.posy--;
             $("#" + this.posx + "_" + this.posy).focus();
         }
 
-        if (e.code == "ArrowDown" && this.posx != this.size) {
+        if (e.code == "ArrowDown" && this.posy < this.size) {
+            e.preventDefault();
+
             this.posy++;
             $("#" + this.posx + "_" + this.posy).focus();
         }
@@ -255,7 +263,7 @@ class Board
                     // set button for tile
                     var btn = document.createElement("button");
                     btn.setAttribute("id", x + "_" + y);
-                    btn.setAttribute("class", "shadow tile");
+                    btn.setAttribute("class", "shadow tile btn btn-default");
                     btn.setAttribute("onclick", "board.reveal(" + x + "," + y + ")");
                     
                     // btn.innerHTML = map[y - 1][x - 1].toString();//" ";
