@@ -1,3 +1,50 @@
+class KeyboardHandler {
+    posx = 0;
+    posy = 0;
+
+    constructor(_board) {
+        this.board = _board;
+        this.size = _board.size;
+
+        $(document).on("keydown", (e) => this._handle(e));
+        $(document).on("keyup", (e) => this._handleCommenting(e));
+    }
+
+    _handle(e) {
+        if (e.code == "ArrowLeft" && this.posx != 0) {
+            this.posx--;
+            $("#" + this.posx + "_" + this.posy).focus();
+        }
+
+        if (e.code == "ArrowRight" && this.posx != this.size) {
+            this.posx++;
+            $("#" + this.posx + "_" + this.posy).focus();
+        }
+
+        if (e.code == "ArrowUp" && this.posy != 0) {
+            this.posy--;
+            $("#" + this.posx + "_" + this.posy).focus();
+        }
+
+        if (e.code == "ArrowDown" && this.posx != this.size) {
+            this.posy++;
+            $("#" + this.posx + "_" + this.posy).focus();
+        }
+    }
+
+    _handleCommenting(e) {
+        if (e.code == "Space") {
+            e.preventDefault();
+
+            this.board.isCommenting = true;
+            this.board.reveal(this.posx, this.posy, false);
+            this.board.isCommenting = false;
+        }
+        return;
+    }
+}
+
+
 class Board
 {
     grid = [];
@@ -16,6 +63,8 @@ class Board
 
         this._generateGrid();
         this._generateIndicators();
+
+        this.keyboardHandler = new KeyboardHandler(this);
     }
     
     _fill(x, y, _mode=false) {
@@ -306,3 +355,4 @@ class Board
         if (!_isFilling) { this._fill(x, y, this.isCommenting); }
     }
 }
+
