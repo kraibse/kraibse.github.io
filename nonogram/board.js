@@ -11,6 +11,12 @@ class KeyboardHandler {
     }
 
     _handle(e) {
+        if (e.code == "Space") {
+            this.board.isCommenting = true;
+            this.board.reveal(this.posx, this.posy, false);
+            this.board.isCommenting = false;
+        }
+
         if (e.code == "ArrowLeft" && this.posx != 0) {
             this.posx--;
             $("#" + this.posx + "_" + this.posy).focus();
@@ -35,12 +41,7 @@ class KeyboardHandler {
     _handleCommenting(e) {
         if (e.code == "Space") {
             e.preventDefault();
-
-            this.board.isCommenting = true;
-            this.board.reveal(this.posx, this.posy, false);
-            this.board.isCommenting = false;
         }
-        return;
     }
 }
 
