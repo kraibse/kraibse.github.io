@@ -5,22 +5,40 @@ body
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#board button, #menu button
+.tile
 {
     background-color: #fff;
-    width: 40px;
-    height: 40px;
-    margin: 1px;
-    border: none;
+    text-align: center;
+    align-items: center;
+
+    font-size: 20px;
+    font-weight: bold;
+    
+    /* padding: auto; */
+    width: 44px;
+    height: 44px;
+    border-radius: 0px;
 }
-#board button:hover, #menu button:hover
+
+.tile:hover, .tile:focus
 {
-    background-color: rgb(255, 204, 36);
+    background-color: #CF9FFF;
+    /* transform: scale(1.1); */
+    outline: 2px solid #fff;
+    border-radius: 0.125em;
+}
+
+.tile:active {
+    border-style: outset;
 }
 
 #board
 {
     margin: auto;
+}
+
+#board td {
+    padding: 1.5px;
 }
 
 #menu
@@ -32,7 +50,7 @@ body
 
 #switch
 {
-    width: 80px !important;
+    min-width: 160px !important;
 
 }
 
@@ -50,3 +68,19 @@ body
 {
     text-align: center;
 }
+
+
+#board table {
+    margin: auto;
+    /* position: relative; */
+    left: -22px;
+}
+
+#instructions td {
+    padding: 4px 8px;
+}
+/* 
+tr, td {
+    margin: 0;
+    padding: 0;
+} */
