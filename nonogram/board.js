@@ -12,6 +12,11 @@ class KeyboardHandler {
     }
     
     _handle(e) {
+        if (e.code == "Enter")
+        {
+            return;
+        }
+
         e.preventDefault();
         
         if (e.code == "Space") {
