@@ -6,46 +6,42 @@ class KeyboardHandler {
         this.board = _board;
         this.size = _board.size;
 
+        
         $(document).on("keydown", (e) => this._handle(e));
         $(document).on("keyup", (e) => this._handleCommenting(e));
     }
-
+    
     _handle(e) {
+        e.preventDefault();
+        
         if (e.code == "Space") {
             this.board.isCommenting = true;
             this.board.reveal(this.posx, this.posy, false);
             this.board.isCommenting = false;
         }
-
+        
         if (e.code == "ArrowLeft" && this.posx != 0) {
-            e.preventDefault();
-
+            
             this.posx--;
             $("#" + this.posx + "_" + this.posy).focus();
         }
-
-        if (e.code == "ArrowRight" && this.posx != this.size) {
-            e.preventDefault();
-
+        
+        if (e.code == "ArrowRight" && this.posx < this.size - 1) {
             this.posx++;
             $("#" + this.posx + "_" + this.posy).focus();
         }
-
+        
         if (e.code == "ArrowUp" && this.posy != 0) {
-            e.preventDefault();
-
             this.posy--;
             $("#" + this.posx + "_" + this.posy).focus();
         }
 
-        if (e.code == "ArrowDown" && this.posy < this.size) {
-            e.preventDefault();
-
+        if (e.code == "ArrowDown" && this.posy < this.size - 1) {
             this.posy++;
             $("#" + this.posx + "_" + this.posy).focus();
         }
     }
-
+    
     _handleCommenting(e) {
         if (e.code == "Space") {
             e.preventDefault();
@@ -59,29 +55,29 @@ class Board
     grid = [];
     revealedTiles = [];
     indicators = [[], []];
-
+    
     size = 10;
     lives = 3;
     totalPoints = 0;
     points = 0;
-
+    
     isCommenting = false;
     
     constructor(_size) {
         this.size = _size;
-
+        
         this._generateGrid();
         this._generateIndicators();
-
+        
         this.keyboardHandler = new KeyboardHandler(this);
     }
     
     _fill(x, y, _mode=false) {
         // check if the last checked element in row / col
-
+        
         // var pointsY = this._getRow(x, this.revealedTiles)
         // .reduce((a, b) => a + b, 0);
-
+        
         // var pointsX = this._getRow(y, this.revealedTiles)
         // .reduce((a, b) => a + b, 0);
 
@@ -205,7 +201,7 @@ class Board
     }
 
     build() {
-        document.getElementById('livesCounter').innerHTML = this.lives;
+        document.getElementById('livesCounter').innerHTML = "❤️".repeat(this.lives);
     
         var div = document.getElementById("board"); // get div
         
@@ -265,6 +261,18 @@ class Board
                     btn.setAttribute("id", x + "_" + y);
                     btn.setAttribute("class", "shadow tile btn btn-default");
                     btn.setAttribute("onclick", "board.reveal(" + x + "," + y + ")");
+
+                    $(btn).on("contextmenu", (event) => {
+                        event.preventDefault();
+                        this.isCommenting = true;
+                        
+                        let buttonID = event.target.getAttribute("id").split("_");
+                        let posx = buttonID[0];
+                        let posy = buttonID[1];
+                        
+                        this.reveal(posx, posy, false);
+                        this.isCommenting = false;
+                    });
                     
                     // btn.innerHTML = map[y - 1][x - 1].toString();//" ";
                     btn.innerHTML = " ";
@@ -301,7 +309,7 @@ class Board
             var content = this.grid[y][x].toString();
             if (tile.innerHTML == ' ') {
                 if (content == 0) {
-                    document.getElementById('livesCounter').innerHTML = --this.lives;
+                    document.getElementById('livesCounter').innerHTML = "❤️".repeat(--this.lives);
                     bg = "#ff726f";
                     color = bg;
                     content = '💣';
