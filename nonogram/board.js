@@ -11,6 +11,8 @@ class KeyboardHandler {
     }
 
     _handle(e) {
+        e.preventDefault();
+        
         if (e.code == "Space") {
             this.board.isCommenting = true;
             this.board.reveal(this.posx, this.posy, false);
@@ -18,29 +20,22 @@ class KeyboardHandler {
         }
 
         if (e.code == "ArrowLeft" && this.posx != 0) {
-            e.preventDefault();
 
             this.posx--;
             $("#" + this.posx + "_" + this.posy).focus();
         }
 
-        if (e.code == "ArrowRight" && this.posx != this.size) {
-            e.preventDefault();
-
+        if (e.code == "ArrowRight" && this.posx < this.size - 1) {
             this.posx++;
             $("#" + this.posx + "_" + this.posy).focus();
         }
 
         if (e.code == "ArrowUp" && this.posy != 0) {
-            e.preventDefault();
-
             this.posy--;
             $("#" + this.posx + "_" + this.posy).focus();
         }
 
-        if (e.code == "ArrowDown" && this.posy < this.size) {
-            e.preventDefault();
-
+        if (e.code == "ArrowDown" && this.posy < this.size - 1) {
             this.posy++;
             $("#" + this.posx + "_" + this.posy).focus();
         }
@@ -265,6 +260,18 @@ class Board
                     btn.setAttribute("id", x + "_" + y);
                     btn.setAttribute("class", "shadow tile btn btn-default");
                     btn.setAttribute("onclick", "board.reveal(" + x + "," + y + ")");
+
+                    $(btn).on("contextmenu", (event) => {
+                        event.preventDefault();
+                        this.isCommenting = true;
+                        
+                        let buttonID = event.target.getAttribute("id").split("_");
+                        let posx = buttonID[0];
+                        let posy = buttonID[1];
+                        
+                        this.reveal(posx, posy, false);
+                        this.isCommenting = false;
+                    });
                     
                     // btn.innerHTML = map[y - 1][x - 1].toString();//" ";
                     btn.innerHTML = " ";
