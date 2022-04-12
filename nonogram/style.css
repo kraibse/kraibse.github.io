@@ -79,8 +79,8 @@ body
 #instructions td {
     padding: 4px 8px;
 }
-/* 
-tr, td {
-    margin: 0;
-    padding: 0;
-} */
+
+#livesCounter {
+    /* background-color: white; */
+    max-width: 60px !important;
+}
