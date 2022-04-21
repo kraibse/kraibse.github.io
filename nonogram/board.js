@@ -5,7 +5,6 @@ class KeyboardHandler {
     constructor(_board) {
         this.board = _board;
         this.size = _board.size;
-
         
         $(document).on("keydown", (e) => this._handle(e));
         $(document).on("keyup", (e) => this._handleCommenting(e));
@@ -74,6 +73,7 @@ class Board
         this._generateGrid();
         this._generateIndicators();
         
+        $("#0_0").focus();
         this.keyboardHandler = new KeyboardHandler(this);
     }
     
@@ -112,7 +112,6 @@ class Board
         for (var i = 0; i < this.size; i++)
         {
             this.isCommenting = true;
-            var element = document.getElementById(x + '_' + y);
             
             if (rowHints == pointsX) {
                 if (this.revealedTiles[y][i] == 0) {
@@ -268,8 +267,8 @@ class Board
 
                             board.reveal(_x, _y);
                         },
-                        contextmenu: (event) => {
-                            event.preventDefault();
+                        contextmenu: (e) => {
+                            e.preventDefault();
                             board.isCommenting = true;
 
                             let eid = e.target.id;
