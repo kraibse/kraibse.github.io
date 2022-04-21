@@ -254,7 +254,6 @@ class Board
                     p.html(hintlist);
                     td.append(p);
                 }
-<<<<<<< HEAD
                 else {
                     var btn = $("<button/>", {
                         "class": "shadow tile btn btn-default",
@@ -292,31 +291,6 @@ class Board
                     });
 
                     td.append(btn);
-=======
-                else
-                {
-                    // set button for tile
-                    var btn = document.createElement("button");
-                    btn.setAttribute("id", x + "_" + y);
-                    btn.setAttribute("class", "shadow tile btn btn-default");
-                    btn.setAttribute("onclick", "board.reveal(" + x + "," + y + ")");
-
-                    $(btn).on("contextmenu", (event) => {
-                        event.preventDefault();
-                        this.isCommenting = true;
-                        
-                        let buttonID = event.target.getAttribute("id").split("_");
-                        let posx = buttonID[0];
-                        let posy = buttonID[1];
-                        
-                        this.reveal(posx, posy, false);
-                        this.isCommenting = false;
-                    });
-                    
-                    // btn.innerHTML = map[y - 1][x - 1].toString();//" ";
-                    btn.innerHTML = " ";
-                    td.appendChild(btn);
->>>>>>> 478a6f986136c3a6e40508148524f8c34ed48c78
                 }
                 tr.append(td);
             }
@@ -337,26 +311,23 @@ class Board
     
         if (this.isCommenting == false) {
             var content = this.grid[y][x].toString();
-            if (tile.innerHTML == ' ') {
-                if (content == 0) {
-                    document.getElementById('livesCounter').innerHTML = "❤️".repeat(--this.lives);
-                    bg = "#ff726f";
-                    color = bg;
-                    content = '💣';
-                    this.revealedTiles[y][x] = -1;
-                }
-                else
-                {
-                    this.points++;
-                    bg = "; background-color: #90EE90;";
-                    color = "#fff";
-                    content = "✔"
-                    this.revealedTiles[y][x] = 1;
-                }
+            if (tile.innerHTML != ' ') {
+                return;
             }
-            else
-            {
-                return; // skips repeated clicking on revealed panel (point farming)
+            
+            if (content == 0) {
+                document.getElementById('livesCounter').innerHTML = "❤️".repeat(--this.lives);
+                bg = "#ff726f";
+                color = bg;
+                content = '💣';
+                this.revealedTiles[y][x] = -1;
+            }
+            else {
+                this.points++;
+                bg = "; background-color: #90EE90;";
+                color = "#fff";
+                content = "✔"
+                this.revealedTiles[y][x] = 1;
             }
         }
         else
