@@ -205,86 +205,86 @@ class Board
     }
 
     build() {
-        document.getElementById('livesCounter').innerHTML = this.lives;
-    
-        var div = document.getElementById("board"); // get div
-        
-        var t = document.createElement("table");
-        // t.setAttribute("cellspacing", "0");
+        $("#livesCounter").html(this.lives);
+        var t = $("<table/>", {
+            //  fixing the focus conflict when switching between m/kb
+            mouseout: () => {
+                let id = document.activeElement.id;
+                board.keyboardHandler.posx = parseInt(id[0]);
+                board.keyboardHandler.posy = parseInt(id[2]);
+            }
+        });
 
         for (var y = -1; y < this.size; y++)
         {
-            var tr = document.createElement("tr");
-            // tr.setAttribute("class", "row");
+            var tr = $("<tr/>");
             
             for (var x = -1; x < this.size; x++)
             {
-                var td = document.createElement("td");
+                var td = $("<td/>");
 
                 // upper left corner
-                if (y == -1 && x == -1)
-                {
-                    tr.appendChild(td)
+                if (y == -1 && x == -1) {
+                    tr.append(td);
                     continue;
                 }
 
-                if (y == -1 && x != -1)
-                {
+                if (y == -1 && x != -1) {
                     // write col hints
                     
                     var hintlist = "";
-                    var p = document.createElement("p");
-                    p.setAttribute("class", "verticalHints");
+                    var p = $("<p/>", {"class": "verticalHints"});
 
-                    for (var i = 0; i < this.indicators[0][x].length; i++)
-                    {
+                    for (var i = 0; i < this.indicators[0][x].length; i++) {
                         hintlist += this.indicators[0][x][i] + "<br/>";
                     }
-
-                    p.innerHTML = hintlist;
-                    td.appendChild(p);
+                    p.html(hintlist);
+                    td.append(p);
                 }
                 else if (x == -1)
                 {
                     // write row hints
                     var hintlist = "";
-                    var p = document.createElement("p");
+                    var p = $("<p/>");
 
-                    for (var i = 0; i < this.indicators[1][y].length; i++)
-                    {
+                    for (var i = 0; i < this.indicators[1][y].length; i++) {
                         hintlist += this.indicators[1][y][i] + " ";
                     }
-                    
-                    p.innerHTML = hintlist;
-                    td.appendChild(p);
+                    p.html(hintlist);
+                    td.append(p);
                 }
-                else
-                {
-                    // set button for tile
-                    var btn = document.createElement("button");
-                    btn.setAttribute("id", x + "_" + y);
-                    btn.setAttribute("class", "shadow tile btn btn-default");
-                    btn.setAttribute("onclick", "board.reveal(" + x + "," + y + ")");
-                    
-                    // btn.innerHTML = map[y - 1][x - 1].toString();//" ";
-                    btn.innerHTML = " ";
-                    td.appendChild(btn);
-                }
+                else {
+                    var btn = $("<button/>", {
+                        "class": "shadow tile btn btn-default",
+                        id: x+"_"+y,
+                        text: " ",
 
-                tr.appendChild(td);
+                        // event.target on event https://stackoverflow.com/a/13252233
+                        click: (e) => {
+                            let eid = e.target.id;
+                            let _x = parseInt(eid[0]);
+                            let _y = parseInt(eid[2]);
+
+                            board.reveal(_x, _y);
+                        },
+                        mouseenter: (e) => {
+                            let eid = e.target.id;
+                            let _x = parseInt(eid[0]);
+                            let _y = parseInt(eid[2]);
+
+                            board.keyboardHandler.posx = _x;
+                            board.keyboardHandler.posy = _y;
+                            $(_x + "_" + _y).focus();
+                        }
+                    });
+
+                    td.append(btn);
+                }
+                tr.append(td);
             }
-            t.appendChild(tr);
+            t.append(tr);
         }
-        div.appendChild(t);
-    
-    }
-    
-    enableCommenting() {
-        this.isCommenting = !this.isCommenting;
-        var btn = document.getElementById("switch");
-
-        if (this.isCommenting) { btn.innerHTML = "Disable Commenting"; }
-        else { btn.innerHTML = "Enable Commenting"; }
+        $("#board").append(t);
     }
 
     reveal(x, y, _isFilling=false) {
