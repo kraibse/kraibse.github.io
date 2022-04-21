@@ -28,32 +28,35 @@
                 <a href="https://github.com/kraibse/">Github</a>
             </div>
         </div>
-
+        
         <br/>
         
-        <div>
+        <div class="mx-auto text-center">
             <div id="postgameMessage"></div>
             <div id="board"></div>
 
             <div id="menu" class="my-3">
-                <p>Lives: <span id="livesCounter"></span></p>
-                <button id="switch" onclick="board.enableCommenting()">Enable Commenting</button>
+                <p><span id="livesCounter" class="bg-secondary rounded shadow p-2">❤️❤️❤️</span></p>
             </div>
-
-            <hr>
             
+            
+            <hr>
         </div>
-
-        <div id="instructions" class="container mx-auto my-5 text-center shadow rounded">
+        
+        <div id="instructions" class="container mx-auto my-5 p-4 text-center shadow rounded bg-secondary">
             <h1>Instructions</h1>
             <p>This website supports using your mouse and keyboard to play the game.</p>
             <p>Please find the tutorial <a href="https://puzzlygame.com/pages/how_to_play_nonograms/">here</a>.</p>
             <br>
-            <table class="table-dark w-100 text-left rounded border border-white">
-                <thead class="">
+            <table class="table-dark w-100 p-3 text-left shadow rounded border border-white">
+                <thead>
                     <td>Shortcut</td>
                     <td>Description</td>
                 </thead>
+                <tr>
+                    <td>Right mouse button</td>
+                    <td>Used to comment out the selected tile.</td>
+                </tr>
                 <tr>
                     <td>ArrowKeys</td>
                     <td>Navigating and focussing the tiles in the grid.</td>
@@ -68,6 +71,7 @@
                 </tr>
             </table>
         </div>
+        <p id="changelog" class="my-3 text-center">Updates and commits can be found <a href="https://github.com/kraibse/kraibse.github.io/commits/master">here</a>.</p>
     </body>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
