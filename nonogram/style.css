@@ -22,7 +22,7 @@ body
 
 .tile:hover, .tile:focus
 {
-    background-color: #CF9FFF;
+    background-color: #CF9FFF !important;
     /* transform: scale(1.1); */
     outline: 2px solid #fff;
     border-radius: 0.125em;
