@@ -323,8 +323,8 @@ class Board
             }
             else {
                 this.points++;
-                bg = "; background-color: #90EE90;";
-                color = "#fff";
+                bg = "#90EE90";
+                color = "#000";
                 content = "✔"
                 this.revealedTiles[y][x] = 1;
             }
@@ -342,8 +342,8 @@ class Board
             else if (tile.innerHTML == " ")
             {
                 var content = comment_symbol;
-                color = "#666";
-                bg = "#ccc";
+                color = "#333";
+                bg = "#bbb";
                 this.revealedTiles[y][x] = 2;
             }
             else 

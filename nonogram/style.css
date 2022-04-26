@@ -1,13 +1,15 @@
 body
 {
-    background-color: #333;
+    background-color: #212121;
     color: #fff;    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 .tile
 {
-    background-color: #fff;
+    background-color: #eee;
+    /* background-color: #ccc; */
     text-align: center;
     align-items: center;
 
@@ -23,6 +25,7 @@ body
 .tile:hover, .tile:focus
 {
     background-color: #CF9FFF !important;
+    color: white !important;
     /* transform: scale(1.1); */
     outline: 2px solid #fff;
     border-radius: 0.125em;
@@ -34,7 +37,7 @@ body
 
 #board
 {
-    margin: auto;
+    margin-right: 56px;
 }
 
 #board td {
@@ -72,8 +75,13 @@ body
 
 #board table {
     margin: auto;
+    padding-right: 56px;
     /* position: relative; */
     left: -22px;
+}
+
+#instructions {
+    background-color: #424242;
 }
 
 #instructions td {
@@ -83,4 +91,6 @@ body
 #livesCounter {
     /* background-color: white; */
     max-width: 60px !important;
+    letter-spacing: 0.2em;
+    font-size: 26px;
 }
