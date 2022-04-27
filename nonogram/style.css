@@ -84,8 +84,26 @@ body
     background-color: #424242;
 }
 
+#instructions table {
+    border-collapse: separate;
+    border-spacing: 8px;
+}
+
+#instructions thead td {
+    background-color: #222;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#instructions tr {
+    background-color: #515151 !important;
+}
+
 #instructions td {
-    padding: 4px 8px;
+    padding: 8px 16px;
+    background-color: #626262;
+    border-radius: 0.25em;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
 
 #livesCounter {
