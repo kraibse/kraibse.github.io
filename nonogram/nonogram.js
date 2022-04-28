@@ -1,59 +1,3 @@
-class KeyboardHandler {
-    posx = 0;
-    posy = 0;
-
-    constructor(_board) {
-        this.board = _board;
-        this.size = _board.size;
-        
-        $(document).on("keydown", (e) => this._handle(e));
-        $(document).on("keyup", (e) => this._handleCommenting(e));
-    }
-    
-    _handle(e) {
-        if (e.code == "Enter")
-        {
-            return;
-        }
-
-        e.preventDefault();
-        
-        if (e.code == "Space") {
-            this.board.isCommenting = true;
-            this.board.reveal(this.posx, this.posy, false);
-            this.board.isCommenting = false;
-        }
-        
-        if (e.code == "ArrowLeft" && this.posx != 0) {
-            
-            this.posx--;
-            $("#" + this.posx + "_" + this.posy).focus();
-        }
-        
-        if (e.code == "ArrowRight" && this.posx < this.size - 1) {
-            this.posx++;
-            $("#" + this.posx + "_" + this.posy).focus();
-        }
-        
-        if (e.code == "ArrowUp" && this.posy != 0) {
-            this.posy--;
-            $("#" + this.posx + "_" + this.posy).focus();
-        }
-
-        if (e.code == "ArrowDown" && this.posy < this.size - 1) {
-            this.posy++;
-            $("#" + this.posx + "_" + this.posy).focus();
-        }
-    }
-    
-    _handleCommenting(e) {
-        if (e.code == "Space") {
-            e.preventDefault();
-        }
-    }
-}
-
-
 class Board
 {
     grid = [];
@@ -78,14 +22,6 @@ class Board
     }
     
     _fill(x, y, _mode=false) {
-        // check if the last checked element in row / col
-        
-        // var pointsY = this._getRow(x, this.revealedTiles)
-        // .reduce((a, b) => a + b, 0);
-        
-        // var pointsX = this._getRow(y, this.revealedTiles)
-        // .reduce((a, b) => a + b, 0);
-
         var rowHints = this.indicators[1][y]
         .reduce((a, b) => a + b, 0);
 
