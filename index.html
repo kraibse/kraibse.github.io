@@ -4,64 +4,44 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/ribbon.css">
   <title>Developer Portfolio</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-header navbar-expand-lg navbar-dark bg-dark text-light px-4">
-    <a class="navbar-brand mr-5" href="#">My Developer Portfolio</a>
-    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
 
-<div class="jumbotron jumbotron-fluid hero-banner text-light pt-5">
-  <div class="container my-5 pt-5">
-    <img src="" alt="" height="256">
-    <h1 class="display-4">Welcome to My Website</h1>
-    <p class="lead">Here you will find information about my skills and experience as a software developer.</p>
+
+  <div class="hero-banner backdrop-blur jumbotron jumbotron-fluid text-light pt-5 py-5">
+    <div class="content bg-dark text-light container mt-5 p-5 pt-4 section">
+      <h1 class="ribbon mb-5">Hi! My name is Leon.</h1>
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center">
+          <img src="img/avatar-gradient.png" class="rounded-circle" alt="Avatar Image" height="256">
+        </div>
+        <div class="col-md-8 ml-4">
+          <h1 class=""></h1>
+          <strong>I am a software developer with experience in building web and mobile applications using various
+            technologies such as JavaScript, Wordpress and Python.</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+      </div>
+
+        
   </div>
-</div>
 
   <!-- <canvas id="homeCanvas"></canvas> -->
 
-  <div class="container p-5">
-    <div class="row align-items-center">
-      <div class="col-md-4 text-align-center">
-        <img src="avatar.jpg" class="rounded-circle mb-5" alt="Avatar Image" height="300px">
-      </div>
-      <div class="col-md-8">
-        <h1 class="mb-5 border-bottom">Hi! My name is Leon :)</h1>
-        <p>I am a software developer with experience in building web and mobile applications using various technologies such as Java, Python, and React.</p>
-      </div>
-    </div>
-  </div>
-  
-
-  <div class="container my-3">
-    <div id="about" class="container">
 
 
-      <h1 class="border-bottom mt-5 mb-3">About</h1>
+  <!-- <div class="container mt-3"> -->
+    <!-- <div id="about" class="container pt-5 section">
+      <h2 class="border-bottom text-purple display-5">About</h2>
       <p>
         Welcome to my portfolio website! My name is Leon and I am a skilled software developer with experience in both
         Python and JavaScript. I have a passion for creating intuitive and user-friendly web applications, and I am
@@ -83,34 +63,147 @@
         me. I would be happy to discuss your project in more detail and provide a quote for my services. Thank you for
         visiting my portfolio website, and I look forward to the opportunity to work with you.
       </p>
+    </div> -->
+
+    <nav class="navbar navbar-header navbar-expand-lg navbar-dark bg-dark text-light px-4">
+      <a class="navbar-brand mr-5" href="#">My Developer Portfolio</a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+<div class="container section m-5 text-center">
+  <h1 class="display-1" id="animated-title">
+    <span>W</span>
+    <span>e</span>
+    <span>l</span>
+    <span>c</span>
+    <span>o</span>
+    <span>m</span>
+    <span>e</span>
+  </h1>
+  <p class="lead">Here you will find information about my skills and experience as a software developer.</p>
+</div>
+
+  <div class="container" id="projects">
+
+    <h2 class="border-bottom text-purple display-5">Projects</h2>
+
+    <div class="card my-4 container bg-dark">
+      <div class="row no-gutters">
+        <div class="col-md-4 p-0 m-0">
+          <img src="img/minecraft.png" class="card-img" alt="Minecraft cover image">
+        </div>
+        <div class="col-md-8 p-3">
+          <div class="card-body">
+            <h5 class="card-title">Pixelbuilder | Minecraft</h5>
+            <p class="card-text">This tool allows you to easily create and export pixel art designs directly into your
+              Minecraft world. Explore the possibilities and let your creativity shine.</p>
+            <p class="card-text"><small class="text-muted">Python, Java</small></p>
+            <a href="">
+              <button class="btn btn-primary align-self-end">Find out more</button>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div id="experience">
-      <h1 class="border-bottom pt-3 mb-5">Experience</h1>
-      <h2>Software Engineer</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non nunc in ex porttitor placerat. Ut euismod,
-        ipsum quis aliquam ultrices, justo nulla pellentesque odio, eget egestas nulla magna nec mauris. Integer
-        faucibus urna purus, non congue mauris tempus in.
-      </p>
-
-      <h2>Systems Administrations</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non nunc in ex porttitor placerat. Ut euismod,
-        ipsum quis aliquam ultrices, justo nulla pellentesque odio, eget egestas nulla magna nec mauris. Integer
-        faucibus urna purus, non congue mauris tempus in.
-      </p>
+    <div class="card my-4 container bg-dark">
+      <div class="row no-gutters">
+        <div class="col-md-8 p-3 text-right">
+          <div class="card-body">
+            <h5 class="card-title">Gallery of Shaders</h5>
+            <p class="card-text">This project is a gallery of beautiful shaders created by talented artists. It includes
+              a wide variety of styles and techniques, from photorealistic to abstract and everything in between.</p>
+            <p class="card-text align-self-end"><small class="text-muted">GLSL</small></p>
+            <a href="./shaders/">
+              <button class="btn btn-primary align-self-end">Find out more</button>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4 p-0 m-0">
+          <img src="shaders.png" class="card-img " alt="Shaders cover image">
+        </div>
+      </div>
     </div>
 
-    <div id="projects" class="pt-3">
-
+    <div class="card my-4 container bg-dark">
+      <div class="row no-gutters">
+        <div class="col-md-4 p-0 m-0">
+          <img src="img/nonogram.png" class="card-img" alt="Nonogram cover image">
+        </div>
+        <div class="col-md-8 p-3">
+          <div class="card-body">
+            <h5 class="card-title">Nonogrid</h5>
+            <p class="card-text">This project is a fun and challenging puzzle game where players must fill in a grid of
+              squares according to given clues. It's a great way to test your logic and problem-solving skills.</p>
+            <p class="card-text align-self-end"><small class="text-muted">JavaScript</small></p>
+            <a href="https://kraibse.github.io/nonogram">
+              <button class="btn btn-primary align-self-end">Find out more</button>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
+
   </div>
+
+
+  <div id="experience" class="container section">
+    <h2 class="border-bottom text-purple display-5">Experience</h2>
+    <h3>Software Engineer</h3>
+    <ul>
+      <li>Designing, developing, and maintaining software applications that support the company's business operations
+      </li>
+      <li>Working with Wordpress to design and build websites</li>
+      <li>Integrating ELO systems to manage the company's documents and data</li>
+      <li>Implementing Cobra systems to track and manage customer interactions and relationships</li>
+      <li>Strong skills in software development, including experience with programming languages such as PHP, MySQL,
+        and JavaScript</li>
+      <li>Good understanding of web development principles and technologies</li>
+      <li>Familiarity with Wordpress, ELO, and Cobra systems</li>
+      <li>Collaborating with a team of developers, business analysts, and other stakeholders to understand the
+        company's needs and translate them into functional software solutions</li>
+      <li>Performing code reviews, troubleshooting and fixing issues, and continuously improving the software
+        applications to ensure they are reliable, efficient, and effective</li>
+    </ul>
+
+    <h3 class="mt-5">Systems Administrations</h3>
+    <ul>
+      <li>Installing and configuring hardware and software</li>
+      <li>Setting up and maintaining network infrastructure</li>
+      <li>Managing user accounts and permissions</li>
+      <li>Providing technical support to users</li>
+      <li>Developing and implementing policies and procedures for the use of IT systems</li>
+      <li>Ensuring the security and compliance of IT systems with relevant laws and regulations</li>
+      <li>Planning and executing IT projects, such as the deployment of new systems or the integration of different
+        systems within the portfolio</li>
+    </ul>
+  </div>
+</div>
 
 
   <!-- footer -->
 
-  <footer class="bg-dark text-white py-5 mt-5" style="margin-top: 100px;">
+  <footer class="bg-dark text-white py-5 mt-5">
     <div class="container">
       <div class="row justify-content-between align-items-center">
         <div class="col-md-3 text-md-left mb-3 mb-md-0">
@@ -118,7 +211,7 @@
           <p>Leon Horn</p>
           <p>Software Engineer</p>
         </div>
-        <div class="col-md-3 text-md-right mb-3 mb-md-0">
+        <div class="col-md-3 text-md-right mb-3 mb-md-0" id="contact">
           <h4>Contact</h4>
           <p>Email: <a href="mailto:leoneric.horn@gmail.com">leoneric.horn@gmail.com</a></p>
           <p>Germany</p>
@@ -126,9 +219,11 @@
       </div>
     </div>
   </footer>
-  
+
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>

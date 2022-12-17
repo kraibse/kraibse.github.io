@@ -1,0 +1,82 @@
+body {
+    background-color: #161718;
+    /* background-color: #30304f; */
+    color: #fff;
+}
+
+h2::after {
+    content: "_";
+}
+
+h2 {
+    border-color: #8470da;
+    padding: 0.6rem auto;
+    margin-bottom: 1.6rem;
+    font-weight: 700;
+}
+
+hr {
+    margin: 64px 0px;
+}
+
+li, strong {
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.animated-title span {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.card img {
+    background-position: center center;
+    margin: auto 0;
+}
+
+.card-body {
+    padding: 1.2rem;
+}
+
+.card-title {
+    margin-bottom: 2rem;
+}
+
+.section {
+    /* padding-bottom: 80px; */
+    margin: 10em auto !important;
+}
+
+.hero-banner {
+    background-image: url('../img/banner-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    /* text-shadow: 0px 1px 1px #333;  */
+    text-align: left;
+    min-height: 500px !important;
+}
+
+.section-purple {
+    background-color: #4351b1;
+    /* #5d496b; */
+}
+
+.text-purple {
+    /* color: #9c4fdf; */
+    color: #6578ff;
+}
+
+.wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    max-width: 1000px !important;
+}
+
+/*  */
