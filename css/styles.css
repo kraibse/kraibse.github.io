@@ -79,4 +79,17 @@ p {
     max-width: 1000px !important;
 }
 
-/*  */
+/* navbar */
+
+.progress-bar {
+    height: 3px;
+    background-color: #8470da;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: width 0.3s ease;
+  }
+
+
+/* navbar end */
