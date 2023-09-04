@@ -92,7 +92,7 @@
 
         $("#0_0").focus();
 
-        $(window).click(() => {
+        $(window).$("div#board").click((e) => {
             let x = board.keyboardHandler.posx;
             let y = board.keyboardHandler.posy;
             $("#" + x + "_" + y).focus();
