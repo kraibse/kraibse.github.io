@@ -7,3 +7,4 @@ $(window).on('scroll', function() {
     $('.progress-bar').css('width', progress + '%');
   });
   
+  

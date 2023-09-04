@@ -2,227 +2,271 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/ribbon.css">
-  <title>Developer Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Include Font Awesome CSS -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ribbon.css">
+    <title>Developer Portfolio</title>
 </head>
 
 <body>
 
+    <nav class="navbar navbar-header navbar-expand-lg navbar-dark section-purple bg-dark text-light px-4 sticky-top">
+        <div class="container">
 
-  <div class="hero-banner backdrop-blur jumbotron jumbotron-fluid text-light pt-5 py-5">
-    <div class="content bg-dark text-light container mt-5 p-5 pt-4 section">
-      <h1 class="ribbon mb-5">Hi! My name is Leon.</h1>
-      <div class="row align-items-center">
-        <div class="col-md-4 text-center">
-          <img src="img/avatar-gradient.png" class="rounded-circle" alt="Avatar Image" height="256">
+            <a class="navbar-brand mr-5 align-baseline" href="#">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-braces align-bottom">
+                    <path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1" />
+                    <path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1" />
+                </svg>
+                kraibse.github.io
+            </a>
+            <div class="progress-bar"></div>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tierlist.html">Tierlist</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col-md-8 ml-4">
-          <h1 class=""></h1>
-          <strong>I am a software developer with experience in building web and mobile applications using various
-            technologies such as JavaScript, Wordpress and Python.</strong>
-          </div>
-        </div>
-      </div>
-
-      <div class="container">
-      </div>
-
-        
-  </div>
-
-  <!-- <canvas id="homeCanvas"></canvas> -->
-
-
-
-  <!-- <div class="container mt-3"> -->
-    <!-- <div id="about" class="container pt-5 section">
-      <h2 class="border-bottom text-purple display-5">About</h2>
-      <p>
-        Welcome to my portfolio website! My name is Leon and I am a skilled software developer with experience in both
-        Python and JavaScript. I have a passion for creating intuitive and user-friendly web applications, and I am
-        always eager to learn new technologies and techniques to improve my skills.
-      </p>
-      <p>
-        In my current role as a JavaScript and Python developer, I have utilized my expertise in these programming
-        languages to develop a wide range of web applications. From simple websites to complex web-based systems, I have
-        a proven track record of delivering high-quality projects on time and within budget.
-      </p>
-      <p>
-        In addition to my technical skills, I am a strong communicator and team player. I enjoy working closely with
-        clients to understand their needs and develop solutions that meet their unique requirements. I am also able to
-        work independently, utilizing my problem-solving skills to overcome challenges and find creative solutions to
-        difficult problems.
-      </p>
-      <p>
-        If you are in need of a Python and JavaScript developer for your next project, please don't hesitate to contact
-        me. I would be happy to discuss your project in more detail and provide a quote for my services. Thank you for
-        visiting my portfolio website, and I look forward to the opportunity to work with you.
-      </p>
-    </div> -->
-
-
-    <nav class="navbar navbar-header navbar-expand-lg navbar-dark bg-dark text-light px-4 sticky-top">
-      <a class="navbar-brand mr-5" href="#">kraibse.github.io</a>
-      <div class="progress-bar"></div>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
     </nav>
 
-    
-
-
-<div class="container section m-5 text-center">
-  <h1 class="display-1" id="animated-title">Welcome to my portfolio.</h1>
-  <p class="lead">Here you will find information about my skills and experience as a software developer.</p>
-</div>
-
-  <div class="container" id="projects">
-
-    <h2 class="border-bottom text-purple display-5">Projects</h2>
-
-    <div class="card my-4 container bg-dark">
-      <div class="row no-gutters">
-        <div class="col-md-4 p-0 m-0">
-          <img src="img/minecraft.png" class="card-img" alt="Minecraft cover image">
+    <div class="container-fluid hero-banner py-5 section-purple" id="hero-banner">
+        <div class="row">
+            <div class=" text-center">
+                <h1>Find out more about my personal projects.</h1>
+                <!-- <h2 class="text-muted"></h2> -->
+                <h6>kraibse.github.io</h6>
+            </div>
         </div>
-        <div class="col-md-8 p-3">
-          <div class="card-body">
-            <h5 class="card-title">Pixelbuilder | Minecraft</h5>
-            <p class="card-text">This tool allows you to easily create and export pixel art designs directly into your
-              Minecraft world. Explore the possibilities and let your creativity shine.</p>
-            <p class="card-text"><small class="text-muted">Python, Java</small></p>
-            <a href="">
-              <button class="btn btn-primary align-self-end">Find out more</button>
-            </a>
-          </div>
+        <div class="row my-5">
+            <div class="col-md-6 offset-md-3 text-center">
+                <div class="terminal-menu mx-auto my-5">
+                    <ul class="list-unstyled d-flex justify-content-around">
+                        <li>
+                            <i class="fab fa-js"></i>
+                        </li>
+                        <li>
+                            <i class="fab fa-python"></i>
+                        </li>
+                        <li>
+                            <i class="fab fa-vuejs"></i>
+                        </li>
+                        <li>
+                            <i class="fab fa-linux"></i>
+                        </li>
+
+                        <li>
+                            <!-- <svg width="64" height="64" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill="#fff" fill-rule="evenodd" d="M113.267 17.073a6 6 0 0 1 7.65 1.994l27.365 40.29a6.004 6.004 0 0 1 .938 4.456l-17.75 96.424a6.008 6.008 0 0 1-.614 1.75l-5.615 10.465a6 6 0 0 1-7.159 2.864l-40.966-13.455a5.998 5.998 0 0 1-3.623-3.292L43.896 91.043a6 6 0 0 1 .075-4.981l20.462-43.107a6 6 0 0 1 2.733-2.792l46.101-23.09Zm-46.804 49.59-10.477 22.07 14.724 33.593-3.134-46.802-1.113-8.861Zm15.11 38.283 3.132 46.777 23.595 7.75-26.727-54.527Zm38.451 51.181 16.637-90.375-24.142-14.339-31.464 25.212 38.969 79.502ZM78.167 63.561l28.341-22.708 1.394-7.672-31.566 15.81 1.831 14.57Zm41.066-25.616-.574 3.158 4.558 2.707-3.984-5.865Z" clip-rule="evenodd" style="--darkreader-inline-fill: #060606;" data-darkreader-inline-fill=""></path></g></svg> -->
+                            <svg width="64px" height="64px" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg"
+                                fill="#fff">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path fill="#fff" fill-rule="evenodd"
+                                        d="M113.267 17.073a6 6 0 0 1 7.65 1.994l27.365 40.29a6.004 6.004 0 0 1 .938 4.456l-17.75 96.424a6.008 6.008 0 0 1-.614 1.75l-5.615 10.465a6 6 0 0 1-7.159 2.864l-40.966-13.455a5.998 5.998 0 0 1-3.623-3.292L43.896 91.043a6 6 0 0 1 .075-4.981l20.462-43.107a6 6 0 0 1 2.733-2.792l46.101-23.09Zm-46.804 49.59-10.477 22.07 14.724 33.593-3.134-46.802-1.113-8.861Zm15.11 38.283 3.132 46.777 23.595 7.75-26.727-54.527Zm38.451 51.181 16.637-90.375-24.142-14.339-31.464 25.212 38.969 79.502ZM78.167 63.561l28.341-22.708 1.394-7.672-31.566 15.81 1.831 14.57Zm41.066-25.616-.574 3.158 4.558 2.707-3.984-5.865Z"
+                                        clip-rule="evenodd" style="--darkreader-inline-fill: #fff;"
+                                        data-darkreader-inline-fill=""></path>
+                                </g>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="row">
+            <div class="col-md-6 mx-auto text-center">
+                <!-- <button class="css-button-sliding-to-left--blue">Find out more</button> -->
+                <a href="https://github.com/kraibse">
+
+                    <button class="css-button-sliding-to-left--blue">
+                        <i class="fab fa-github"></i>
+                        See my Github profile
+                    </button>
+                </a>
+            </div>
+        </div>
     </div>
 
-    <div class="card my-4 container bg-dark">
-      <div class="row no-gutters">
-        <div class="col-md-8 p-3 text-right">
-          <div class="card-body">
-            <h5 class="card-title">Gallery of Shaders</h5>
-            <p class="card-text">This project is a gallery of beautiful shaders created by talented artists. It includes
-              a wide variety of styles and techniques, from photorealistic to abstract and everything in between.</p>
-            <p class="card-text align-self-end"><small class="text-muted">GLSL</small></p>
-            <a href="./shaders/">
-              <button class="btn btn-primary align-self-end">Find out more</button>
-            </a>
-          </div>
+    <!-- Project showcase -->
+    <div class="container container-small my-5 p-5 text-center">
+        <h2 class="mb-4">
+            <svg width="48px" height="48px" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path fill="#fff" fill-rule="evenodd"
+                        d="M113.267 17.073a6 6 0 0 1 7.65 1.994l27.365 40.29a6.004 6.004 0 0 1 .938 4.456l-17.75 96.424a6.008 6.008 0 0 1-.614 1.75l-5.615 10.465a6 6 0 0 1-7.159 2.864l-40.966-13.455a5.998 5.998 0 0 1-3.623-3.292L43.896 91.043a6 6 0 0 1 .075-4.981l20.462-43.107a6 6 0 0 1 2.733-2.792l46.101-23.09Zm-46.804 49.59-10.477 22.07 14.724 33.593-3.134-46.802-1.113-8.861Zm15.11 38.283 3.132 46.777 23.595 7.75-26.727-54.527Zm38.451 51.181 16.637-90.375-24.142-14.339-31.464 25.212 38.969 79.502ZM78.167 63.561l28.341-22.708 1.394-7.672-31.566 15.81 1.831 14.57Zm41.066-25.616-.574 3.158 4.558 2.707-3.984-5.865Z"
+                        clip-rule="evenodd" style="--darkreader-inline-fill: #fff;" data-darkreader-inline-fill="">
+                    </path>
+                </g>
+            </svg>
+            Obsidian Plugin: Table Sorting
+        </h2>
+        <video width="100%" class="obsidian-preview-video shadow mb-4" controls loop="true" autoplay>
+            <source src="preview/table-sorting/preview-multi-column.mp4">
+        </video>
+
+        <div class="description text-muted mb-4 text-center mx-auto" style="width: 90%">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
-        <div class="col-md-4 p-0 m-0">
-          <img src="shaders.png" class="card-img " alt="Shaders cover image">
-        </div>
-      </div>
+
+        <a href="https://github.com/kraibse/obsidian-table-sorting" class="my-5">
+            <button class="css-button-sliding-to-left--black">
+                <i class="fab fa-github"></i>
+                Visit the Repository
+            </button>
+        </a>
     </div>
 
-    <div class="card my-4 container bg-dark">
-      <div class="row no-gutters">
-        <div class="col-md-4 p-0 m-0">
-          <img src="img/nonogram.png" class="card-img" alt="Nonogram cover image">
-        </div>
-        <div class="col-md-8 p-3">
-          <div class="card-body">
-            <h5 class="card-title">Nonogrid</h5>
-            <p class="card-text">This project is a fun and challenging puzzle game where players must fill in a grid of
-              squares according to given clues. It's a great way to test your logic and problem-solving skills.</p>
-            <p class="card-text align-self-end"><small class="text-muted">JavaScript</small></p>
-            <a href="https://kraibse.github.io/nonogram">
-              <button class="btn btn-primary align-self-end">Find out more</button>
-            </a>
-          </div>
-        </div>
-      </div>
+
+    <div class="container container-small mx-auto mt-5 text-center">
+        <h2 class="">Other Projects</h2>
     </div>
 
-  </div>
+
+    <div class="container mx-auto m-2 my-5" id="projects">
 
 
-  <div id="experience" class="container section">
-    <h2 class="border-bottom text-purple display-5">Experience</h2>
-    <h3>Software Engineer</h3>
-    <ul>
-      <li>Designing, developing, and maintaining software applications that support the company's business operations
-      </li>
-      <li>Working with Wordpress to design and build websites</li>
-      <li>Integrating ELO systems to manage the company's documents and data</li>
-      <li>Implementing Cobra systems to track and manage customer interactions and relationships</li>
-      <li>Strong skills in software development, including experience with programming languages such as PHP, MySQL,
-        and JavaScript</li>
-      <li>Good understanding of web development principles and technologies</li>
-      <li>Familiarity with Wordpress, ELO, and Cobra systems</li>
-      <li>Collaborating with a team of developers, business analysts, and other stakeholders to understand the
-        company's needs and translate them into functional software solutions</li>
-      <li>Performing code reviews, troubleshooting and fixing issues, and continuously improving the software
-        applications to ensure they are reliable, efficient, and effective</li>
-    </ul>
+        <div class="">
+            <div class="row justify-content-center mx-auto">
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card card-small container bg-dark p-0 shadow">
+                        <div class="row no-gutters m-0">
+                            <img src="img/nonogram.png" class="card-img p-0" alt="Nonogram cover image">
+                        </div>
+                        <div class="row p-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Nonogrid</h5>
+                                <p class="card-text">This project is a fun and challenging puzzle game where players
+                                    must fill
+                                    in a grid of squares according to given clues. It's a great way to test your logic
+                                    and problem-solving
+                                    skills.</p>
+                                <p class="card-text align-self-end"><small class="text-muted">JavaScript</small></p>
+                                <a href="https://kraibse.github.io/nonogram">
+                                    <button class="btn section-purple text-light align-self-end">Find out more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <h3 class="mt-5">Systems Administrations</h3>
-    <ul>
-      <li>Installing and configuring hardware and software</li>
-      <li>Setting up and maintaining network infrastructure</li>
-      <li>Managing user accounts and permissions</li>
-      <li>Providing technical support to users</li>
-      <li>Developing and implementing policies and procedures for the use of IT systems</li>
-      <li>Ensuring the security and compliance of IT systems with relevant laws and regulations</li>
-      <li>Planning and executing IT projects, such as the deployment of new systems or the integration of different
-        systems within the portfolio</li>
-    </ul>
-  </div>
-</div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card card-small container p-0 bg-dark shadow">
+                        <div class="row no-gutters m-0">
+                            <img src="img/minecraft.png" class="card-img p-0" alt="Minecraft cover image">
+                        </div>
+                        <div class="row p-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Pixelbuilder | Minecraft</h5>
+                                <p class="card-text">This tool allows you to easily create and export pixel art designs
+                                    directly
+                                    into your Minecraft world. Explore the possibilities and let your creativity shine.
+                                </p>
+                                <p class="card-text"><small class="text-muted">Python, Java</small></p>
+                                <a href="">
+                                    <button class="btn section-purple text-light align-self-end">Find out more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
-  <!-- footer -->
-
-  <footer class="bg-dark text-white py-5 mt-5">
-    <div class="container">
-      <div class="row justify-content-between align-items-center">
-        <div class="col-md-3 text-md-left mb-3 mb-md-0">
-          <h4>Developer Profile</h4>
-          <p>Leon Horn</p>
-          <p>Software Engineer</p>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card card-small container p-0 bg-dark shadow">
+                        <div class="row no-gutters m-0">
+                            <img src="https://picsum.photos/480" class="card-img p-0" alt="Minecraft cover image">
+                        </div>
+                        <div class="row p-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Pixelbuilder | Minecraft</h5>
+                                <p class="card-text">This tool allows you to easily create and export pixel art designs
+                                    directly
+                                    into your Minecraft world. Explore the possibilities and let your creativity shine.
+                                </p>
+                                <p class="card-text"><small class="text-muted">Python, Java</small></p>
+                                <a href="">
+                                    <button class="btn section-purple text-light align-self-end">Find out more</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-3 text-md-right mb-3 mb-md-0" id="contact">
-          <h4>Contact</h4>
-          <p>Email: <a href="mailto:leoneric.horn@gmail.com">leoneric.horn@gmail.com</a></p>
-          <p>Germany</p>
-        </div>
-      </div>
+
+
+
     </div>
-  </footer>
 
-  </div>
+    <div class="w-100 section-purple text-center py-5">
+        <!-- github link -->
+        <h2>What else did I develop?</h2>
+        <a href="https://github.com/kraibse">
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-  </script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
-  
-  <script src="js/progressbar.js"></script>
+            <button class="css-button-sliding-to-left--blue">
+                <i class="fab fa-github"></i>
+                See my Github profile
+            </button>
+        </a>
+
+    </div>
+
+
+    <!-- footer -->
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-md-3 text-md-left mb-3 mb-md-0">
+                    <h4>Developer Profile</h4>
+                    <p>Leon Horn</p>
+                    <p>Software Engineer</p>
+                </div>
+                <div class="col-md-3 text-md-right mb-3 mb-md-0" id="contact">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:leoneric.horn@gmail.com">leoneric.horn@gmail.com</a></p>
+                    <p>Germany</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script src="js/progressbar.js"></script>
 </body>
