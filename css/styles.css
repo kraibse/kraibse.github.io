@@ -3,7 +3,12 @@ body {
     /* background-color: #30304f; */
     color: #fff;
     font-size: 1rem;
-    
+    font-family: "inter", sans-serif;
+
+}
+
+h1 {
+    /* font-size: 3.5rem; */
 }
 
 h2::after {
@@ -26,7 +31,8 @@ hr {
     margin: 64px 0px;
 }
 
-li, strong {
+li,
+strong {
     font-size: 1.1rem;
     line-height: 2rem;
 }
@@ -48,6 +54,13 @@ p {
 
 .card-body {
     padding: 1.2rem;
+    height: 350px;
+}
+
+.card-body button {
+    position: absolute;
+    bottom: 0 !important;
+    margin-bottom: 24px;
 }
 
 .card-title {
@@ -71,7 +84,7 @@ p {
     text-align: left;
     /* min-height: 500px !important; */
     position: relative;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .hero-banner i {
@@ -83,11 +96,96 @@ p {
     text-decoration: underline;
 }
 
+#hero-banner {
+    padding: 64px 16px 48px 16px !important;
+}
+
+.css-button-sliding-to-left--blue {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: rgb(75, 26, 147);
+    overflow: hidden;
+    border: 2px solid white;
+    /* color: #2c0b8e; */
+    color: white;
+}
+
+.css-button-sliding-to-left--blue:hover {
+    color: rgb(75, 26, 147);
+}
+
+.css-button-sliding-to-left--blue:hover:after {
+    width: 100%;
+}
+
+.css-button-sliding-to-left--blue:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+}
+
+.css-button-sliding-to-left--black {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #212529;
+    /* color: #212529; */
+    background: #212529;
+}
+
+.css-button-sliding-to-left--black:hover {
+    color: #212529;
+
+}
+
+.css-button-sliding-to-left--black:hover:after {
+    width: 100%;
+}
+
+.css-button-sliding-to-left--black:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+}
+
 .terminal-menu li {
     /* text-decoration-style: ">"; */
     /* content: ">"; */
-  /* position: absolute; */
-  /* left: 0; */
+    /* position: absolute; */
+    /* left: 0; */
     list-style: none !important;
     /* font-family: 'Xanh Mono', monospace !important; */
     /* font-family: 'Phudu', cursive; */
@@ -96,20 +194,88 @@ p {
 }
 
 .hero-banner h1 {
-    margin-top: 120px;
+    /* margin-top: 120px; */
+    font-size: 3.5rem;
+    font-family: "inter", sans-serif;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+@media (min-width: 500px) {
+    .hero-banner h1 {
+        font-size: 2.5rem !important;
+    }
 }
 
 .terminal-menu {
-    padding-top: 120px;
-    align-content: top;
+    /* padding-top: 120px; */
+    /* align-content: bottom; */
+    max-width: 460px;
 }
 
 .terminal-menu li {
-    margin-bottom: 1.4rem;
+    /* margin-bottom: 1.4rem;
+    width: 64px;
+    height: 64px; */
+    font-size: 54px;
+}
+
+.terminal-menu svg {
+    /* width: 64px; */
+    /* position: absolute; */
+    margin-top: -6px;
+}
+
+.card-small {
+    width: 400px;
+}
+
+.card-img {
+    width: 400px !important;
+    height: 400px !important;
+}
+
+.card-text {
+    overflow-y: scroll
+}
+
+@media (min-width: 768px) {
+    .container-small {
+        width: 721px;
+    }
+
+    .container-large {
+        width: 970px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container-small {
+        width: 500px;
+    }
+
+    .container-large {
+        width: 1170px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container-small {
+        width: 1000px;
+    }
+
+    .container-large {
+        width: 1500px;
+    }
+}
+
+.container-small,
+.container-large {
+    max-width: 100%;
 }
 
 .section-purple {
-    background-color: #4351b1;
+    background-color: rgb(75, 26, 147) !important;
     /* #5d496b; */
 }
 
@@ -134,11 +300,11 @@ p {
     left: 0;
     width: 0;
     transition: width 0.3s ease;
-  }
+}
 
-  .navbar-hidden {
+.navbar-hidden {
     transform: translateY(-100%);
     transition: transform 0.3s ease;
-  }
+}
 
 /* navbar end */
