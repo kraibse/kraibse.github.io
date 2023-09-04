@@ -17,7 +17,7 @@ h1 {
 }
 
 .hero-banner {
-    background-image: url('banner-2.jpg');
+    /* background-image: url('banner-2.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
