@@ -1,8 +1,5 @@
 .list {
-    width: calc(80%);
-    margin: 8px auto;
-    margin-top: 16px;
-    background-color: #ccc;
+    border: 2px solid #a88bfa;
     color: #333;
     border-radius: 5px;
     text-align: left;
@@ -10,36 +7,48 @@
 }
 
 .sub {
-    margin: 0px 12px;
     height: 100%;
-    background-color: #333;
-    color: #edd736;
+    color: white;
     margin: 24px auto;
     padding: 8px 32px;
-    box-shadow: 0px 0px 5px 4px rgba(17,17,17,0.6);
     text-align: left;
     font-size: 18px;
 }
 
+h2 {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+h3 {
+    color: white;
+}
+
+.category h3 {
+    text-align: center;
+    background-color: #a88bfaaf;
+}
+
 .sub p a:before, p a:link, p a:visited {
-    color: #edd736;
+    /* color: #edd736; */
     text-decoration: none;
 }
 
 .sub a:hover {
-    color: #d63a3a;
+    /* color: #d63a3a !important; */
+    color: #ffc107 !important;
 }
 
 .top-10 {
     height: 100%;
 
-    background-color: #333;
-    color: #edd736;
+    /* background-color: #333; */
+    /* color: #edd736; */
 
     margin: 24px auto;
     padding: 8px;
 
-    box-shadow: 0px 0px 5px 4px rgba(17,17,17,0.6);
+    /* box-shadow: 0px 0px 5px 4px rgba(17,17,17,0.6); */
     text-align: left;
 }
 
@@ -83,17 +92,8 @@
     color: #eee;
 }
 
-#navigation {
-    height: 100%;
-    width: 40%;
-    max-width: 480px;
-    margin: 0px 12px;
-    background-color: #293241;
-    margin: 24px auto;
-    padding: 8px 32px;
-    box-shadow: 0px 0px 5px 4px rgba(17,17,17,0.6);
-    text-align: left;
-    font-size: 16px;
+#navigation div li {
+    width: 100%;
 }
 
 #navigation p {
@@ -104,16 +104,20 @@
     color: #eee;
 }
 
-#navigation a:hover {
-    color: #edd736;
+#navigation li a:hover {
+    color: #ffc107 !important;
 }
 
 #navigation ul, li {
-    margin: 6px;
+    /* margin: 6px; */
 }
 
 #navigation li:before {
     color: #eee;
+}
+
+#navigation h3 a{
+    color: #a88bfa !important;
 }
 
 #lastUpdated
@@ -122,4 +126,9 @@
     text-align: center;
     margin: 8px;
     margin-top: 12px;
+}
+
+
+#top-button {
+    font-size: 1.1rem;
 }
