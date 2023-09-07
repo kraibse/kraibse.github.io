@@ -3,42 +3,81 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="./css/master.css">
-    <link rel="stylesheet" href="./css/menubar.css">
+
     <link rel="stylesheet" href="./css/tierlist.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <!-- Include Font Awesome CSS -->
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/ribbon.css">
 
     <link rel="icon" href="./images/mrkrabs.png">
     <title>Kraibse's ultimate collection of top-tier lists</title>
 </head>
 
 <body>
-    <div id="menubar">
-        <div id="dropdown">
-            <button type="button" id="dropdown-button">&#9776; projects</button>
-            <div id="dropdown-content">
-                <a href="index.html">homepage</a>
-                <a href="nonogram/index.html">nonogram</a>
+    <nav class="navbar navbar-header navbar-expand-lg navbar-dark section-purple bg-dark text-light px-4 sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand mr-5 align-baseline" href="#">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-braces align-bottom">
+                    <path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1" />
+                    <path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1" />
+                </svg>
+                kraibse.github.io
+            </a>
+            <div class="progress-bar"></div>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tierlist.html">Tierlist</a>
+                    </li>
+                </ul>
             </div>
+            
+            <button class="float-right btn text-white" onclick="gotoTop()" id="top-button" title="Go to top">
+                Table of Contents
+                <i class="fa-solid fa-hand-point-up"></i>
+            </button>
         </div>
-        <div id="github-link">
-            <a href="https://github.com/kraibse/">Github</a>
-        </div>
+    </nav>
 
-    </div>
 
-    <div id="lastUpdated">
+    
+    <!-- Automated table of contents -->
+    <div id="navigation" class="bg-dark p-5"></div>
+    
+    <div id="lastUpdated" class="mx-auto text-center my-5">
         <p>Last updated: <b>January 10th, 2021</b></p>
     </div>
 
-    <!-- Automated table of contents -->
-    <div id="navigation"></div>
-
-
+    <div class="row">
+        
     <!-- START MOVIES -->
 
-    <div class="container main" id="movies">
-        <h2 class="heading">Movies</h2>
-        <div class="list">
+    <div class="container main category col-lg-6 p-5" id="movies">
+        <h2 class="heading mt-5">Movies</h2>
+        <div class="list m-sm-0">
             <div class="sub top-10">
                 <h3>Top-10</h3>
                 <ol>
@@ -54,9 +93,9 @@
                     <li>Brahms the Boy II (2020)</li>
                 </ol>
             </div>
-            
+
             <hr>
-            
+
             <h3>Sci-Fi</h3>
             <div class="sub">
                 <p>The Arrival (2016)</p>
@@ -187,8 +226,8 @@
 
     <!-- START TV SHOWS -->
 
-    <div class="container main" id="shows">
-        <h2 class="heading">Shows</h2>
+    <div class="container main category col-lg-6 p-5" id="shows">
+        <h2 class="heading mt-5">Shows</h2>
         <div class="list">
             <div class="sub top-10">
                 <h3>Top-10</h3>
@@ -290,8 +329,8 @@
 
     <!-- START GAMES -->
 
-    <div class="container main" id="games">
-        <h2 class="heading">Games</h2>
+    <div class="container main category col-lg-6 p-5" id="games">
+        <h2 class="heading mt-5">Games</h2>
         <div class="list">
             <div class="sub top-10">
                 <h3>Top-10</h3>
@@ -319,7 +358,7 @@
                 <p>Half-Life 2</p>
                 <p>L.A. Noire</p>
             </div>
-            
+
             <h3>Open World</h3>
             <div class="sub">
                 <p>Grand Theft Auto 5</p>
@@ -332,7 +371,7 @@
                 <p>Cyberpunk 2077</p>
                 <p>Just Cause (series)</p>
             </div>
-            
+
             <h3>Action</h3>
             <div class="sub">
                 <p>Devil May Cry 5</p>
@@ -350,7 +389,7 @@
                 <p>Thief</p>
                 <p>Mark of the Ninja: Remastered</p>
             </div>
-            
+
             <h3>Horror</h3>
             <div class="sub">
                 <p>Distraint (Series)</p>
@@ -363,7 +402,7 @@
                 <p>Showdown Bandit</p>
                 <p>The Blackout Club</p>
             </div>
-            
+
             <h3>Survival</h3>
             <div class="sub">
                 <p>Minecraft</p>
@@ -416,8 +455,8 @@
 
     <!-- START MOBILE GAMES -->
 
-    <div class="container main" id="mobile-games">
-        <h2 class="heading">Mobile-Games</h2>
+    <div class="container main category col-lg-6 p-5" id="mobile-games">
+        <h2 class="heading mt-5">Mobile-Games</h2>
         <div class="list">
             <div class="sub top-10">
                 <h3>Top-10</h3>
@@ -475,7 +514,15 @@
         </div>
     </div>
 
-    <button onclick="gotoTop()" id="top-button" title="Go to top">Top</button>
+</div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/progressbar.js"></script>
 </body>
 <script src="./js/main.js" charset="utf-8"></script>
 
