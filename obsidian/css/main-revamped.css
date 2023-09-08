@@ -1,0 +1,134 @@
+body {
+    --h1-size: 2.0rem;
+    --h2-size: 1.8rem;
+    --h3-size: 1.4rem;
+    --h4-size: 1.4rem;
+}
+
+hr {
+    page-break-before: always;
+    /* visibility: hidden; */
+}
+
+.markdown-embed-title { display:none; }
+
+/* img:hover { */
+    /* transform: scale(1.2);
+    animation-name: zoom;
+    animation-duration: 0.5s; */
+/* } */
+
+h1, .cm-header-1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-style: italic;
+
+    /* transform: scaleY(1.2) !important;
+    line-height: 48px; */
+}
+
+h1:not(:first-child) {
+    page-break-before: always;
+    font-size: 2rem !important;
+  }
+  
+h2, .cm-header-2 {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.8rem !important;
+    color: #7499d1 !important;
+}
+
+h3, .cm-header-3 {
+    color: #ff6578 !important;
+    font-style: italic;
+
+    font-weight: 400;
+}
+
+h4, .cm-header-4 {
+    font-style: italic;
+
+}
+
+span.cm-quote, blockquote, blockquote strong {
+    color: lightslategray !important;
+}
+
+strong, .cm-strong {
+    /* color: #f08705 !important; */
+    color: #9dd174 !important;
+}
+
+highlight, .cm-highlight {
+    background-color: #886ce4af !important;
+}
+
+/* Italic spans */
+em, .cm-em {
+    color: #6fc6e1 !important;
+    font-size: 1.1rem;
+}
+
+light {
+    font-weight: 300 !important;
+}
+
+table td:not(:empty) {
+    width: auto !important;
+    min-width: 3rem;
+}
+
+table:not([class]) th:not(:first-child) {
+    width: 100%;
+}
+
+table:not([class]) tbody {
+    filter: drop-shadow(0px 6px 5px #222);
+}
+
+table:not([class]) th {
+    background-color: #181c20 !important;
+    border: none !important;
+}
+
+table:not([class]) th {   
+    /* border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; */
+}
+
+
+/* obsidian-snippets.pages.dev */
+
+/* p > a.tag {
+    font-size: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+    text-decoration: none;
+    border: none;
+}
+p > a.tag::before {
+    content: '#';
+    font-size: 16px;
+}
+p > a.tag::after {
+    content: attr(href);
+    float: right;
+    min-width: 3ch;
+    max-width: 25%;
+    margin-right: calc(-25% - 1.5em);
+    margin-left: calc(-25% - 1.5em);
+    position: relative;
+    clear: right;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 16px;
+}
+
+p > a.tag:hover::after {
+    max-width: -moz-fit-content;
+    max-width: fit-content !important;
+} */
