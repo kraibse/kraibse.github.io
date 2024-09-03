@@ -69,7 +69,9 @@ class KeyboardHandler {
 
         kd.SPACE.press((e) => {   // scrolling by spacebar
             this.board.isCommenting = true;
+            this.board.isUserCommenting = true;
             this.board.reveal(this.posx, this.posy, false);
+            this.board.isUserCommenting = false;
             this.board.isCommenting = false;
         });
 

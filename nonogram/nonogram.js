@@ -10,6 +10,7 @@ class Board
     points = 0;
     
     isCommenting = false;
+    isUserCommenting = false;
     
     constructor(_size) {
         this.size = _size;
@@ -267,7 +268,7 @@ class Board
         }
         else
         {
-            var comment_symbol = '?';
+            var comment_symbol = (this.isUserCommenting) ? '?' : '!';
     
             if (tile.innerHTML == comment_symbol && !_isFilling)
             {
