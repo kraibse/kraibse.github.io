@@ -49,6 +49,7 @@ class Board
         for (var i = 0; i < this.size; i++)
         {
             this.isCommenting = true;
+            this.isUserCommenting = false;
             
             if (rowHints == pointsX) {
                 if (this.revealedTiles[y][i] == 0) {
@@ -61,6 +62,8 @@ class Board
                 }
             }
         }
+        
+        this.isUserCommenting = true;
         this.isCommenting = _mode;
     }
     
