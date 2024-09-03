@@ -271,7 +271,7 @@ class Board
         }
         else
         {
-            var comment_symbol = (this.isUserCommenting) ? '!' : '?';
+            var comment_symbol = (this.isUserCommenting) ? '?' : '!';
     
             if (tile.innerHTML == comment_symbol && !_isFilling)
             {
